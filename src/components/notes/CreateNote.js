@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios'
+import axios from '../../api/index'
 import { useHistory } from 'react-router-dom'
 
 export default function CreateNote() {

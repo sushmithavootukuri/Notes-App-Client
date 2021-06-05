@@ -15,26 +15,34 @@ code {
 }
 
 body{
-  background: rgb(63,9,63);
+  background: white;
 }
 .notes-page{
   width: 100%;
   min-height: 100vh;
-  color: whitesmoke;
+
 }
 .notes-page header{
   max-width: 1920px;
-  min-height: 100px;
+  min-height: 60px;
   overflow: hidden;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0 2px 10px rgb(58, 55, 54);
+
+background-color: red;
 }
 a{
   text-decoration: none;
-  color: whitesmoke;
+  color: white;
+}
+
+.edit-icon{
+color : blue;
+font-weight: 700;
 }
 .notes-page header .logo{
   text-transform: uppercase;
@@ -43,19 +51,23 @@ a{
 .notes-page header ul li{
   list-style: none;
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 0.5rem;
 }
 .notes-page header ul li a{
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 1;
+  font-weight: 600;
+ 
+  padding: 0.4rem 0.5rem;
+  border-radius: 10px;
 }
 .notes-page header ul li a:hover{
-  opacity: 1;
+ 
+  box-shadow: 0 2px 10px rgb(206, 201, 201);
 }
 .notes-page section{
   width: 100%;
-  box-shadow: 0 0 5px rgb(7,25,63);
-  padding: 20px 0;
+  padding: 4rem;
 }
 .note-wrapper{
   max-width: 1920px;
@@ -65,25 +77,27 @@ a{
   margin: auto;
 }
 .card{
-  width: 300px;
-  box-shadow: 0 0 5px rgb(7,25,63);
-  background: rgb(7,25,63);
-  padding: 10px;
+  width: 17rem;
+  box-shadow: 0 2px 10px rgb(58, 55, 54);
+ border-top: 4px solid red;
+ border-radius: 10px;
+  padding: 1rem;
   position: relative;
-  color: #ddd;
-  margin: 15px;
+  color: black;
+  margin: 1rem;
   cursor: pointer;
 }
 .card .close{
   position: absolute;
-  top:0;
+  top:2px;
   right: 10px;
+  font-size: large;
   font-weight: 900;
   cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
-  color: white;
+  color: red;
 }
 .card h4{
   margin-right: 10px;
@@ -99,11 +113,12 @@ a{
   -webkit-line-clamp: 7;
   overflow: hidden;
   margin: 10px 0;
-  color: #fff9;
+  color: black;
+  
 }
 .card .date{
   text-align: right;
-  color: wheat;
+  color:red;
 }
 .card-footer{
   display: flex;
@@ -114,14 +129,21 @@ a{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 12px;
+  font-weight: 600;
+color: gray;
 }
+
+
 /* ******* Create Note******************* */
 .create-note{
   max-width: 500px;
   width: 100%;
   margin: auto;
-  border: 10px solid #ccc;
+  box-shadow: 0 2px 10px rgb(58, 55, 54);
   padding: 30px;
+  text-align: center;
+  border-top: 4px solid red;
+  border-radius: 10px;
 }
 .create-note h2{
   letter-spacing: 2px;
@@ -137,6 +159,7 @@ a{
   width: 100%;
   height: 40px;
   padding:  0 5px;
+  font-weight: 500;
 }
 .create-note label{
   text-transform: uppercase;
@@ -146,14 +169,19 @@ a{
 .create-note textarea{
   width: 100%;
   resize: none;
-  padding: 0 5px;
+  padding:10px;
+  font-weight: 400;
 }
 .create-note button{
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
-  color: rgb(7,25,63);
+  color: white;
+  background-color: red;
+  padding: 0 2rem;
+  border-radius: 20px;;
+  width : fit-content;
 }
 @media (max-width: 500px){
   .create-note{
@@ -178,11 +206,11 @@ a{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(63,9,63);
+  background: white;
 }
 .login-page h2,
 .login-page h3{
-  color: #fff8;
+  color: red;
 }
 .login-page h3{
     text-align: center;
@@ -191,9 +219,15 @@ a{
 }
 .login-page p{
   margin: 10px 0;
-  color: white;
+  color: black;
 }
-.login-page span:hover{
-  color: orange;
+.login-page span{
+  color: blue;
+  font-weight: 500;
   cursor: pointer;
+}
+
+.guest-info{
+  opacity: 0.5;
+  color : gray;
 }

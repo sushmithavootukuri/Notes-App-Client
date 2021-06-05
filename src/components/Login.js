@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import axios from 'axios';
+import axios from '../api/index'
 
 export default function Login({ setIsLogin }) {
     const [user, setUser] = useState({ name: '', email: '', password: '' })
@@ -21,6 +21,7 @@ export default function Login({ setIsLogin }) {
             })
             setUser({ name: '', email: '', password: '' })
             setErr(res.data.msg)
+            setOnLogin(false)
         } catch (err) {
             err.response.data.msg && setErr(err.response.data.msg)
         }
@@ -29,7 +30,7 @@ export default function Login({ setIsLogin }) {
     const loginSubmit = async e => {
         e.preventDefault()
         try {
-            const res = await axios.post('http://localhost:5000/users/login', {
+            const res = await axios.post('/users/login', {
                 email: user.email,
                 password: user.password
             })
@@ -65,7 +66,10 @@ export default function Login({ setIsLogin }) {
                     <p>You don't have an account?
                         <span onClick={() => setOnLogin(true)}> Register Now</span>
                     </p>
+
+
                     <h3>{err}</h3>
+                    <p className="guest-info">Guest Credentials : guest@gmail.com &nbsp; guest123</p>
                 </form>
             </div>
             <div className="register create-note" style={style}>

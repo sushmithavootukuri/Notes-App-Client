@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { format } from 'timeago.js'
-import axios from 'axios'
+import axios from '../../api/index'
 
 export default function Home() {
     const [notes, setNotes] = useState([])
@@ -48,7 +48,7 @@ export default function Home() {
                         <p className="date">{format(note.date)}</p>
                         <div className="card-footer">
                             {note.name}
-                            <Link to={`edit/${note._id}`} >Edit</Link>
+                            <Link to={`edit/${note._id}`} className="edit-icon">Edit</Link>
                         </div>
                         <button className="close"
                             onClick={() => deleteNote(note._id)} >X</button>
